@@ -1,0 +1,10 @@
+version: '3'
+services:
+  phantomjs:
+    image: "kobabasu/alpine-chrome:0.39"
+    container_name: "chrome"
+    working_dir: "/app"
+    volumes:
+      - "/home/core/share:/app"
+    tty: true
+    stdin_open: true
