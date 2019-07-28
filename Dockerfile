@@ -29,12 +29,11 @@ RUN    apk add --update --no-cache \
     \
     && npm cache verify \
     \
-    && npm install --unsafe-perm --no-optional -g \
-        pm2 bower \
+    && npm install -g \
+        pm2 \
         commander async winston colors \
-        hjson jq uglify-js \
+        uglify-js \
         postcss-cli csswring \
-        'github:gulpjs/gulp.git#4.0' gulp-shell gulp-cli \
         nyc mocha \
     \
     && apk del --no-cache \
@@ -44,7 +43,6 @@ RUN    apk add --update --no-cache \
     \
     && mkdir -p /usr/local/lib/node_modules \
     \
-    && ln -s /usr/lib/node_modules/gulp-shell /usr/local/lib/node_modules/gulp-shell \
     \
     \
     \
