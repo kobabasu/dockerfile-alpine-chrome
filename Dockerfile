@@ -35,6 +35,7 @@ RUN    apk add --update --no-cache \
         uglify-js \
         postcss-cli csswring \
         nyc mocha \
+	@babel/core @babel/register @babel/preset-env \
     \
     && apk del --no-cache \
         .node-dependencies \
