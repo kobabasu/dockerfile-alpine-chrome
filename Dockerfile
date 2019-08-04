@@ -2,7 +2,7 @@ FROM node:alpine
 MAINTAINER Keiji Kobayashi <keiji.kobayashi.web@gmail.com>
 
 RUN    apk add --update --no-cache \
-        bash grep git jq make \
+        bash rsync grep git jq make \
         udev ttf-freefont \
         chromium \
     \
